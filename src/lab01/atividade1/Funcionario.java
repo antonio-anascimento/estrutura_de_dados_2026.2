@@ -1,4 +1,4 @@
-package Atividade1;
+package lab01.atividade1;
 
 public class Funcionario {
 
