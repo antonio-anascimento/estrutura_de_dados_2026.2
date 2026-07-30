@@ -1,9 +1,9 @@
 ```mermaid
 classDiagram
     
-    Imoveis -- ContratoDeLocacao
-    Cliente "1*"-- ContratoDeLocacao
-
+    Imoveis "1"--"1" ContratoDeLocacao
+    Cliente "1"--"1*" ContratoDeLocacao
+     
     
     class Imoveis{
         -disponivel Boolean 
@@ -17,13 +17,18 @@ classDiagram
         -nome String
         -cpf String
         -telefone String
+        +gerarHistoricoCliente()
     }
     
     class ContratoDeLocacao{
+
+        -ArrayList ~Imoveis~ imoveis
+        -ArrayList ~Cliente~ cliente
         id String
-        dataInicio Date
-        datafinal Date
-        valorAcordado double
+        -dataInicio Date
+        -datafinal Date
+        -valorAcordado double
+        +DetalhesDoImovel()
         
     }
     
