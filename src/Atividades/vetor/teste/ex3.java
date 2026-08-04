@@ -1,5 +1,5 @@
-package vetor.teste;
-import vetor.VetorEstatico;
+package Atividades.vetor.teste;
+import Atividades.vetor.VetorEstatico;
 
 
 public class ex3 {
@@ -12,13 +12,15 @@ public class ex3 {
         vetorEstatico.inserir("B");
         vetorEstatico.inserir("C");
         vetorEstatico.inserir("D");
-        vetorEstatico.inserir(2,".");
+        vetorEstatico.inserir("F");
 
         vetorEstatico.imprimir();
-        vetorEstatico.obterTamanho();
-        vetorEstatico.removerUltimo();
+
+        System.out.println("Removendo na posição 2");
+        vetorEstatico.remover(2);
+
+        System.out.println("Arranjo apos a remoção");
         vetorEstatico.imprimir();
-        vetorEstatico.obterTamanho();
 
     }
 }

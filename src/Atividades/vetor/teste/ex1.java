@@ -1,8 +1,8 @@
-package vetor.teste;
+package Atividades.vetor.teste;
 
-import vetor.VetorEstatico;
+import Atividades.vetor.VetorEstatico;
 
-public class ex2 {
+public class ex1 {
 
     static void main(){
         VetorEstatico vetorEstatico = new VetorEstatico(10);
