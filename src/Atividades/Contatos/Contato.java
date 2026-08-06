@@ -9,6 +9,7 @@ public class Contato {
     public Contato(String nome, String telefone) {
         Nome = nome;
         Telefone = telefone;
+        this.email = "";
     }
 
     public Contato(String nome, String telefone, String email) {
