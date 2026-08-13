@@ -1,4 +1,4 @@
-package Atividades.vetor;
+package Atividades.Vetor;
 
 public class VetorEstatico {
 

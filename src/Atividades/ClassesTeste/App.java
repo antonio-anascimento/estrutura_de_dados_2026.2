@@ -1,4 +1,4 @@
-package Atividades.Contatos;
+package Atividades.ClassesTeste;
 
 public class App {
 

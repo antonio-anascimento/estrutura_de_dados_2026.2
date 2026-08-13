@@ -1,5 +1,5 @@
-package Atividades.vetor.teste;
-import Atividades.vetor.VetorEstatico;
+package Atividades.Vetor.teste;
+import Atividades.Vetor.VetorEstatico;
 
 
 public class ex4 {

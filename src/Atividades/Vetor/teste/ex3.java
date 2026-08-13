@@ -1,8 +1,8 @@
-package Atividades.vetor.teste;
-import Atividades.vetor.VetorEstatico;
+package Atividades.Vetor.teste;
+import Atividades.Vetor.VetorEstatico;
 
 
-public class ex2{
+public class ex3 {
 
     static void main(){
 
@@ -12,13 +12,15 @@ public class ex2{
         vetorEstatico.inserir("B");
         vetorEstatico.inserir("C");
         vetorEstatico.inserir("D");
-        vetorEstatico.inserir(2,".");
+        vetorEstatico.inserir("F");
 
         vetorEstatico.imprimir();
-        vetorEstatico.obterTamanho();
-        vetorEstatico.removerUltimo();
+
+        System.out.println("Removendo na posição 2");
+        vetorEstatico.remover(2);
+
+        System.out.println("Arranjo apos a remoção");
         vetorEstatico.imprimir();
-        vetorEstatico.obterTamanho();
 
     }
 }
