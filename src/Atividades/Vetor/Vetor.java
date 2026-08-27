@@ -19,6 +19,26 @@ public class Vetor <T>{
         tamanho++;
     }
 
+    public void inserir(int indice, T elemento) {
+        if (tamanho >= elementos.length) {
+            System.out.println("Vetor cheio!");
+            return;
+        }
+
+        if (indice < 0 || indice > tamanho) {
+            System.out.println("Posição inválida");
+            return;
+        }
+
+        for (int i = tamanho; i > indice; i--) {
+            elementos[i] = elementos[i - 1];
+        }
+
+        elementos[indice] = elemento;
+        tamanho++;
+    }
+
+
     @SuppressWarnings("unchecked")
     private void expandir() {
         T[] novo =(T[]) new Object[elementos.length * 2];
@@ -71,6 +91,52 @@ public class Vetor <T>{
 
         return elementos[indice];
     }
+
+    public static int buscaLinear(int[] vetor, int valor) {
+        int comparacoes = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+            comparacoes++;
+
+            if (vetor[i] == valor) {
+                System.out.println("Comparações: " + comparacoes);
+                return i;
+            }
+        }
+
+        System.out.println("Comparações: " + comparacoes);
+        return -1;
+    }
+
+    public static int buscaBinaria(int[] vetor, int valor) {
+        int inicio = 0;
+        int fim = vetor.length - 1;
+        int comparacoes = 0;
+
+        while (inicio <= fim) {
+            int meio = (inicio + fim) / 2;
+
+            comparacoes++;
+
+            if (vetor[meio] == valor) {
+                System.out.println("Comparações: " + comparacoes);
+                return meio;
+            }
+
+            comparacoes++;
+
+            if (vetor[meio] < valor) {
+                inicio = meio + 1;
+            } else {
+                fim = meio - 1;
+            }
+        }
+
+        System.out.println("Comparações: " + comparacoes);
+        return -1;
+    }
+
+
 
     public int tamanho() {
         return tamanho;
