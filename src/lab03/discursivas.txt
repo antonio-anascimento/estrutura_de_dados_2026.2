@@ -1,0 +1,17 @@
+1)Por que essa abordagem usando um array de instâncias da classe Vetor torna a busca de um contato
+  mais rápida em comparação com a versão anterior (uma única lista contendo todos os contatos)?
+
+Na versão anterior (uma lista única), pra achar um contato o programa podia ter que comparar
+com todos os n contatos cadastrados — busca linear O(n) no pior caso. Nessa versão nova, o acesso tabela[indice] é direto (O(1)),
+porque é só olhar a primeira letra do nome e pular pra posição certa do array.
+A busca linear só acontece dentro daquele Vetor específico, que só tem os contatos daquela letra.
+Ou seja, em vez de comparar com todos, você só compara com quem já sabe que pode ser candidato (mesma letra inicial).
+
+2)O que acontece com o desempenho da busca se a maioria dos contatos cadastrados começar com a
+  mesma letra (ex: centenas de nomes iniciando com a letra "M")? O sistema continuará rápido? Justifique.
+
+ Aí o ganho desaparece. O array só serve pra "filtrar" pela primeira letra — mas se quase tudo cai no mesmo slot,
+ aquele Vetor específico vira, na prática, uma lista gigante com busca linear O(n) igual à versão antiga,
+ enquanto os outros 25 slots ficam quase vazios à toa. O sistema continua funcionando,
+ mas não é mais rápido pra esse caso: o desempenho depende de como os dados estão distribuídos,
+ não muda a lógica de busca (ainda é comparação um por um dentro do Vetor)

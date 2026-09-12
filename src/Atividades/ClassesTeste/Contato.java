@@ -30,6 +30,10 @@ public class Contato {
         return email;
     }
 
+    public void setTelefone(String telefone) {
+        Telefone = telefone;
+    }
+
     @Override
     public String toString() {
         if(email.isEmpty()){
