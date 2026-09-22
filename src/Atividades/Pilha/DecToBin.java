@@ -1,3 +1,5 @@
+package Atividades.Pilha;
+
 public class DecToBin {
 
     static void main() {
@@ -16,10 +18,5 @@ public class DecToBin {
             }
 
             System.out.println(binario.toString());
-
-
-
-
-
     }
 }

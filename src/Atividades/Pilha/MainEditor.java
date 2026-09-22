@@ -1,3 +1,5 @@
+package Atividades.Pilha;
+
 public class MainEditor {
 
     static void main() {
@@ -17,8 +19,6 @@ public class MainEditor {
 
         editor.escrever("\n  --VÃO ESTUDAR!--");
         System.out.println("Conteudo final: " + editor.getConteudo());
-
-
 
 
     }

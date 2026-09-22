@@ -1,3 +1,5 @@
+package Atividades.Pilha;
+
 public class EditorTexto {
 
     private Stack<String> undo;
@@ -18,7 +20,6 @@ public class EditorTexto {
         redo = new Stack<>(20);
 
     }
-
 
     public void desfazer() {
         if (!undo.isEmpty()) {
@@ -42,7 +43,4 @@ public class EditorTexto {
             System.out.println("Nada para REFAZER");
         }
     }
-
-
-
 }

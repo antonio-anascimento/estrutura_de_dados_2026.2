@@ -20,9 +20,9 @@ public class Agenda {
 
     public void removerPorNome(String nome) {
 
-        for (int i = 0; i < contatos.tamanho(); i++) {
+        for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-            if (contatos.get(i).getNome().equals(nome)) {
+            if (contatos.ler(i).getNome().equals(nome)) {
                 contatos.remover(i);
                 return;
             }
@@ -31,9 +31,9 @@ public class Agenda {
 
     public void removerPorTelefone(String telefone) {
 
-        for (int i = 0; i < contatos.tamanho(); i++) {
+        for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-            if (contatos.get(i).getTelefone().equals(telefone)) {
+            if (contatos.ler(i).getTelefone().equals(telefone)) {
                 contatos.remover(i);
                 return;
             }
@@ -42,9 +42,9 @@ public class Agenda {
 
     public void removerPorContato(Contato contato) {
 
-        for (int i = 0; i < contatos.tamanho(); i++) {
+        for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-            if (contatos.get(i).equals(contato)) {
+            if (contatos.ler(i).equals(contato)) {
                 contatos.remover(i);
                 return;
             }
@@ -55,19 +55,19 @@ public class Agenda {
 
         if (ehTelefone(valor)) {
 
-            for (int i = 0; i < contatos.tamanho(); i++) {
+            for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-                if (contatos.get(i).getTelefone().equals(valor)) {
-                    return contatos.get(i);
+                if (contatos.ler(i).getTelefone().equals(valor)) {
+                    return contatos.ler(i);
                 }
             }
 
         } else {
 
-            for (int i = 0; i < contatos.tamanho(); i++) {
+            for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-                if (contatos.get(i).getNome().contains(valor)) {
-                    return contatos.get(i);
+                if (contatos.ler(i).getNome().contains(valor)) {
+                    return contatos.ler(i);
                 }
             }
         }
@@ -77,10 +77,10 @@ public class Agenda {
 
     public Contato pesquisarPorPrefixo(String nome) {
 
-        for (int i = 0; i < contatos.tamanho(); i++) {
+        for (int i = 0; i < contatos.obterTamanho(); i++) {
 
-            if (contatos.get(i).getNome().startsWith(nome)) {
-                return contatos.get(i);
+            if (contatos.ler(i).getNome().startsWith(nome)) {
+                return contatos.ler(i);
             }
         }
 
@@ -97,14 +97,14 @@ public class Agenda {
     @Override
     public String toString() {
 
-        if (contatos.tamanho() == 0) {
+        if (contatos.obterTamanho() == 0) {
             return "Agenda vazia.";
         }
 
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < contatos.tamanho(); i++) {
-            sb.append(contatos.get(i)).append("\n");
+        for (int i = 0; i < contatos.obterTamanho(); i++) {
+            sb.append(contatos.ler(i)).append("\n");
         }
 
         return sb.toString();

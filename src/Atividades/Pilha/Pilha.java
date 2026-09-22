@@ -1,3 +1,6 @@
+package Atividades.Pilha;
+
+
 public class Pilha<T extends Comparable<T>> {
 
         private int topo;
@@ -24,7 +27,4 @@ public class Pilha<T extends Comparable<T>> {
         public boolean isEmpty() {
             return topo == -1;
         }
-
-
-
 }

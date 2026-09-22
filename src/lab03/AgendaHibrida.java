@@ -1,7 +1,8 @@
 package lab03;
 
-import Atividades.ClassesTeste.Contato;
+
 import Atividades.Vetor.Vetor;
+import Atividades.ClassesTeste.Contato;
 
 public class AgendaHibrida {
 
@@ -50,8 +51,8 @@ public class AgendaHibrida {
         // Percorre a lista daquela letra até achar a posição certa
         // para manter tudo em ordem alfabética.
         int posicao = 0;
-        while (posicao < listaDaLetra.tamanho()
-                && listaDaLetra.get(posicao).getNome().compareToIgnoreCase(contato.getNome()) < 0) {
+        while (posicao < listaDaLetra.obterTamanho()
+                && listaDaLetra.ler(posicao).getNome().compareToIgnoreCase(contato.getNome()) < 0) {
             posicao++;
         }
 
@@ -71,8 +72,8 @@ public class AgendaHibrida {
 
         Vetor<Contato> listaDaLetra = tabela[indice];
 
-        for (int i = 0; i < listaDaLetra.tamanho(); i++) {
-            if (listaDaLetra.get(i).getNome().equalsIgnoreCase(nome)) {
+        for (int i = 0; i < listaDaLetra.obterTamanho(); i++) {
+            if (listaDaLetra.ler(i).getNome().equalsIgnoreCase(nome)) {
                 listaDaLetra.remover(i);
                 System.out.println("Contato '" + nome + "' removido com sucesso do Vetor '"
                         + letraDoIndice(indice) + "'!");
@@ -92,9 +93,9 @@ public class AgendaHibrida {
 
         Vetor<Contato> listaDaLetra = tabela[indice];
 
-        for (int i = 0; i < listaDaLetra.tamanho(); i++) {
-            if (listaDaLetra.get(i).getNome().equalsIgnoreCase(nome)) {
-                return listaDaLetra.get(i);
+        for (int i = 0; i < listaDaLetra.obterTamanho(); i++) {
+            if (listaDaLetra.ler(i).getNome().equalsIgnoreCase(nome)) {
+                return listaDaLetra.ler(i);
             }
         }
 

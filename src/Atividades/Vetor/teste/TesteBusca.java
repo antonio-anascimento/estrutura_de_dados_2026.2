@@ -19,9 +19,9 @@ public class TesteBusca {
 
             Vetor<Integer> vetor = criarVetorOrdenado(tamanho);
 
-            int valorInicio = vetor.get(0);
-            int valorMeio = vetor.get(vetor.tamanho() / 2);
-            int valorFim = vetor.get(vetor.tamanho() - 1);
+            int valorInicio = vetor.ler(0);
+            int valorMeio = vetor.ler(vetor.obterTamanho() / 2);
+            int valorFim = vetor.ler(vetor.obterTamanho() - 1);
 
             testar(vetor, valorInicio, "Início");
             testar(vetor, valorMeio, "Meio");
@@ -41,8 +41,8 @@ public class TesteBusca {
 
             int posicao = 0;
 
-            while (posicao < vetor.tamanho()
-                    && vetor.get(posicao) < valor) {
+            while (posicao < vetor.obterTamanho()
+                    && vetor.ler(posicao) < valor) {
 
                 posicao++;
             }
@@ -75,11 +75,11 @@ public class TesteBusca {
 
         long inicio = System.nanoTime();
 
-        for (int i = 0; i < vetor.tamanho(); i++) {
+        for (int i = 0; i < vetor.obterTamanho(); i++) {
 
             comparacoes++;
 
-            if (vetor.get(i) == valor) {
+            if (vetor.ler(i) == valor) {
                 resultado = i;
                 break;
             }
@@ -99,7 +99,7 @@ public class TesteBusca {
             int valor) {
 
         int inicio = 0;
-        int fim = vetor.tamanho() - 1;
+        int fim = vetor.obterTamanho() - 1;
         int comparacoes = 0;
         int resultado = -1;
 
@@ -111,14 +111,14 @@ public class TesteBusca {
 
             comparacoes++;
 
-            if (vetor.get(meio) == valor) {
+            if (vetor.ler(meio) == valor) {
                 resultado = meio;
                 break;
             }
 
             comparacoes++;
 
-            if (vetor.get(meio) < valor) {
+            if (vetor.ler(meio) < valor) {
                 inicio = meio + 1;
             } else {
                 fim = meio - 1;
@@ -138,10 +138,10 @@ public class TesteBusca {
             Vetor<Integer> vetor,
             int valor) {
 
-        int[] array = new int[vetor.tamanho()];
+        int[] array = new int[vetor.obterTamanho()];
 
-        for (int i = 0; i < vetor.tamanho(); i++) {
-            array[i] = vetor.get(i);
+        for (int i = 0; i < vetor.obterTamanho(); i++) {
+            array[i] = vetor.ler(i);
         }
 
         long inicio = System.nanoTime();

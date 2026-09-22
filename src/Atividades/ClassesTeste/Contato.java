@@ -1,10 +1,14 @@
 package Atividades.ClassesTeste;
 
-public class Contato {
-
+public class Contato implements Comparable<Contato> {
     private String Nome;
     private String Telefone;
     private String email;
+
+    @Override
+    public int compareTo(Contato outro) {
+        return this.Nome.compareToIgnoreCase(outro.Nome);
+    }
 
     public Contato(String nome, String telefone) {
         Nome = nome;

@@ -1,3 +1,6 @@
+package Atividades.Pilha;
+import Atividades.Vetor.Vetor;
+
 public class Stack<T extends Comparable<T>> {
 
         private Vetor<T> vetor;
@@ -5,7 +8,6 @@ public class Stack<T extends Comparable<T>> {
         public Stack(int capacidade) {
             vetor = new Vetor<>(capacidade);
         }
-
 
         public void push(T elemento) {
             vetor.inserir(elemento);
