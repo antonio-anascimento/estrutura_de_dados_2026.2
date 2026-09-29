@@ -19,10 +19,12 @@ public class Fila <T extends Comparable>{
         tamanho++;
     }
 
-    private boolean isEmpty(){
+    public boolean isEmpty(){
         return tamanho==0;
     }
-
+    public boolean isFull(){
+        return tamanho == elementos.length;
+    }
     public T desenfileirar(){
         if(isEmpty()){
             throw new RuntimeException("Fila Vazia");
