@@ -1,4 +1,4 @@
-package Atividades.Fila;
+package Atividades.Fila.Auxiliares;
 
 import java.util.Random;
 

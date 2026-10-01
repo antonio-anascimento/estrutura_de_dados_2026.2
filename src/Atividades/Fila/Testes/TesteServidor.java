@@ -1,4 +1,6 @@
-package Atividades.Fila;
+package Atividades.Fila.Testes;
+
+import Atividades.Fila.Auxiliares.Servidor;
 
 public class TesteServidor {
 

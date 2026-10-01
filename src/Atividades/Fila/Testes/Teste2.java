@@ -1,4 +1,7 @@
-package Atividades.Fila;
+package Atividades.Fila.Testes;
+
+import Atividades.Fila.Auxiliares.Pacote;
+import Atividades.Fila.Auxiliares.Produtor;
 
 public class Teste2 {
 
