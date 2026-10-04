@@ -1,0 +1,23 @@
+1.
+
+(a) O que buscamos com a análise de complexidade de algoritmos. Qual a importância dessa análise
+no desenvolvimento de software
+
+R: Buscamos entender a complexidade dos algoritimos para poder otimizar a resolução de problemas, sempre buscando resolver o problema com a estrutura mais adequada
+onde o problema vai ser resolvido no menor tempo, menos passos, menos iterações, menos memória e processamento gasto.
+
+(b) Como podemos medir essa complexidade?
+
+R: podemos medir a complexidade temporal e de espaço. Pode ser medida de maneira Empirica através de testes com entradas diferentes,
+medindo o tempo e de maneira matemática através de cálculo contando as operações.
+
+(c) O que a notação Big O representa?
+
+ R: A notação Big O representa a forma de crescimento da complexidade de um algorítimo em função do tamanho da entrada, destacando o pior caso de desempenho.
+
+
+ 2. Discuta as principais vantagens e desvantagens do uso de arrays em termos de complexidade temporal
+ nas operações básicas (inserção, remoção, busca, acesso direto)
+
+ O Array é uma estrutura que funciona muito bem com acesso direto O(1), mas inserção e remoção tem problemas O(n) devido ao deslocamento,
+  se o array estiver ordenado a busca linear funciona muito bem, caso contrario a linear pode ser ruim -- O(n).
