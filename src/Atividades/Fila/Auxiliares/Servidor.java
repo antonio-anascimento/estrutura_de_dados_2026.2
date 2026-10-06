@@ -1,5 +1,4 @@
 package Atividades.Fila.Auxiliares;
-
 import java.util.Random;
 
 public class Servidor {
@@ -9,12 +8,12 @@ public class Servidor {
     private int totalReqPerdidas = 0;
 
     private Random aleatorio;
-    private Fila<String> fila;
+    private Atividades.FIla.Fila<String> fila;
     private int qtdeProcessadores;
     private int N;
 
     public Servidor(int capacidadeFila, int qtdeProcessadores, int maxReqPorCiclo) {
-        this.fila = new Fila<>(capacidadeFila);
+        this.fila = new Atividades.FIla.Fila<>(capacidadeFila);
         //deixando seed fixa para conseguir reproduzir depois.
         this.aleatorio = new Random();
         this.qtdeProcessadores = qtdeProcessadores;

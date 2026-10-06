@@ -30,7 +30,7 @@ public class FilaCircular<T extends Comparable<T>> {
 
     public T desenfileirar() {
         if (isEmpty()) {
-            throw new RuntimeException("cheio");
+            throw new RuntimeException("vazio");
         }
 
         T valor = elementos[inicio];

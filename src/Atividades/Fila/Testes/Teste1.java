@@ -3,7 +3,7 @@ package Atividades.Fila.Testes;
 public class Teste1 {
 
     static void main(){
-        Fila<String> fila = new Fila<>(10);
+        Atividades.FIla.Fila<String> fila = new Atividades.FIla.Fila<>(10);
 
         fila.enfileirar("A");
         fila.enfileirar("B");

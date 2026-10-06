@@ -6,7 +6,7 @@ import Atividades.Fila.Auxiliares.Produtor;
 public class Teste2 {
 
     static void main() {
-        Fila<Pacote> fila = new Fila<Pacote>(10);
+        Atividades.FIla.Fila<Pacote> fila = new Atividades.FIla.Fila<Pacote>(10);
 
         Produtor pr1 = new Produtor("Produto 1", "PC-A");
         Produtor pr2 = new Produtor("Produto 2", "PC-B");
